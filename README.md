@@ -31,11 +31,3 @@ Columns only one type has are empty for the other (`airport_fee` yellow, `trip_t
 ## Assumptions
 Revenue = sum of `total_amount` (what passengers paid, excl. cash tips), net of refunds. Negative `total_amount` represents refunds or financial adjustment, without a trip ID they can't be matched to their original trip.
 
-## Logging and how I'd know it broke
-Each stage prints what it did: files available and downloaded, rows loaded per file, rows loaded vs quarantined, unmapped zones,
-PASS / WARNING / FAIL per check. Bad settings, a missing source file, an empty load, duplicate zone ids or a failed check
-raise an error and stop the run. Unusual row counts reveal silent problems.
-
-## With more time
-schedule as a databricks job with failure handling & alerts · download to a temp folder and validate before replacing files · keep
-older file versions  · store results per run 
