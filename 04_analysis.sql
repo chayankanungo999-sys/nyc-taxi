@@ -1,13 +1,7 @@
 -- Databricks notebook source
 -- MAGIC %md
 -- MAGIC ### # 04_analysis
--- MAGIC The three questions from the assessment, answered from the cleaned table `combined_trips`.
 -- MAGIC Run after `03_combined_trips`. Each result is shown below and saved as a CSV in the volume's `outputs` folder.
--- MAGIC
--- MAGIC - **Trips** = rows where `is_refund` is false (refund rows are reversals, not trips).
--- MAGIC - **Revenue** = `SUM(total_amount)` over all rows; refund rows are negative, so revenue is net of refunds.
--- MAGIC - **Month** = month of the source file (equals the pickup month after cleaning).
-
 -- COMMAND ----------
 
 -- MAGIC %run ./00_config
